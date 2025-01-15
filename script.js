@@ -5,13 +5,7 @@ let btn = document.querySelector("#btn");
 let prompt = document.querySelector("#prompt");
 let text_box = document.querySelector("#answer")
 let userMessage;
-btn.onclick = async(event) => {
-    event.preventDefault();
-    userMessage = prompt.value;
-    let answer = await generateAPIResponse();
-    text_box.innerText = answer;
-    
-}
+
 
 const generateAPIResponse = async () => {
     try {
@@ -30,15 +24,22 @@ const generateAPIResponse = async () => {
         
 
         const data = await response.json();
-        console.log(data);
+        
         let answer = data.candidates[0].content.parts[0].text;
-        console.log(data.candidates[0].content.parts[0].text);
         return answer;
 
     } catch (error) {
         console.error("Error:", error);
     }
 };
+
+btn.onclick = async(event) => {
+    event.preventDefault();
+    userMessage = prompt.value;
+    let answer = await generateAPIResponse();
+    text_box.innerText = answer;
+    
+}
 
 
 
