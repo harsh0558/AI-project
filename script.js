@@ -8,6 +8,11 @@ let trigger = 0;
 
 const generateAPIResponse = async () => {
     try {
+
+        let animation= document.querySelector("#spinner-outer-container");
+        document.querySelector("#chat").appendChild(animation);
+        animation.style.visibility = "visible";
+
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -27,6 +32,9 @@ const generateAPIResponse = async () => {
 
     } catch (error) {
         console.error("Error:", error);
+    } finally {
+        let spinner = document.querySelector("#spinner-outer-container");
+        spinner.style.visibility = "hidden";
     }
 };
 

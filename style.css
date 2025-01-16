@@ -112,3 +112,48 @@ body {
 input:focus {
     outline: none;
 }
+
+#spinner-outer-container {
+    position: relative;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    width: 125px;
+    height: 60px;
+    margin-top: 10px;
+    border-radius: 1em;
+    background-color: #2f2f2f;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+#spinner-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid gray;
+    border-top: 3px solid aliceblue;
+    border-radius: 50%;
+    animation: spin 0.5s infinite linear;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
