@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     height: 100%;
-    overflow-y: auto;
+    
 }
 
 .user {
