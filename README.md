@@ -14,8 +14,6 @@ PotatoGPT is a simple AI-powered chat application that leverages Google’s Gemi
 
 **Live Demo:** [https://ai-project-eight-omega.vercel.app/](https://ai-project-eight-omega.vercel.app/) 🌐
 
-![PotatoGPT Demo](logo.webp)
-
 ## 🚀 Getting Started 🚀
 
 ### 🛠️ Prerequisites
